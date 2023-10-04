@@ -1,43 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Rugwed Portfolio</title>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+    
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- header design -->
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+        
+      </nav>
+    </header>
+    <!-- home section design -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello,It's Me</h3>
+        <h1>Rugwed Bodhankar</h1>
+        <h3>And I'm a <span class="multiple-texts"></span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt minus dolores earum maiores necessitatibus libero impedit ab doloremque aliquam dolore consequuntur voluptas beatae, adipisci sequi suscipit, quaerat accusantium ad laboriosam?</p>
+        <div class="social-media">
+          <a href="https://github.com/rugs07"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/rugwed-bodhankar-7697371a9/"><i class='bx bxl-linkedin' ></i></a>
+          <a href="#"><i class='bx bxl-instagram' ></i></a>
+          </div>
+          <a href="https://drive.google.com/drive/folders/18COSsaf6zt322C7CJT1c2pyRrm9IalQ-?usp=drive_link" class="btn" onclick="document.querySelector('a').click()">Download CV</a>
+      </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <div class="home-img">
+        <img src="Rugwedfinal.png" alt="">
+      </div>
+    </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- about section design -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="images/about.png" alt="">
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Web Developer!</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quibusdam odio dolores enim omnis consectetur itaque sequi explicabo autem inventore perspiciatis ducimus quam animi sunt mollitia, ea aliquid laborum. In!</p>
+        <a href="#about" class="btn">Read More</a>
+      </div>
+    </section>
+    <!-- Skills section design -->
+      <section class="skills" id="skills">
+        <div class="skills_section">
+          <div class="skills_head">
+              <h2 class="heading">My <span>Skills</span></h2>
+          </div>
+  
+          <div class="skills_main">
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>HTML</p>
+                      <P>90%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="html"></span>
+                  </div>
+              </div>
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>CSS</p>
+                      <P>85%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="css"></span>
+                  </div>
+              </div>
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>ReactJS</p>
+                      <P>70%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="sass"></span>
+                  </div>
+              </div>
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>Java Script</p>
+                      <P>70%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="js"></span>
+                  </div>
+              </div>
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>SQL</p>
+                      <P>85%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="react"></span>
+                  </div>
+              </div>
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>Github</p>
+                      <P>70%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="node"></span>
+                  </div>
+              </div>
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>Data Structures</p>
+                      <P>70%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="express"></span>
+                  </div>
+              </div>
+              <div class="skill_bar">
+                  <div class="info">
+                      <p>MongoDB</p>
+                      <P>70%</P>
+                  </div>
+                  <div class="bar">
+                      <span class="mongo"></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      </section>
+
+    <!-- portfolio section design -->
+      <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+          <div class="portfolio-box">
+            <img src="project-1.png" alt="">
+            <div class="portfolio-layer">
+              <h4>Boat Store</h4>
+              <p>HTML, SCSS, REACTJS, STRAPI,  STRIPE</p>
+              <a href="https://github.com/rugs07/BoatStore"><i class='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="keeper.png" alt="">
+            <div class="portfolio-layer">
+              <h4>Keeper App</h4>
+              <p>REACTJS, MONGODB, NODEJS, EXPRESSJS</p>
+              <a href="https://github.com/rugs07/Keeper-App"><i class='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="url1.png" alt="">
+            <div class="portfolio-layer">
+              <h4>URL Shortener</h4>
+              <p>HTML, CSS, PHP, JAVASCRIPT, SQL</p>
+              <a href="https://github.com/rugs07/URL-shortener"><i class='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+
+          <div class="portfolio-box">
+            <img src="pandu1.png" alt="">
+            <div class="portfolio-layer">
+              <h4>Weather App</h4>
+              <p>HTML, CSS, JAVASCRIPT</p>
+              <a href="https://github.com/rugs07/Weather-App"><i class='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+
+
+
+        </div>
+      </sectio>
+      
+    <!-- contact section design -->
+      <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="email Address">
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Mobile Number">
+            <input type="text" placeholder="Email Subject">
+          </div>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <input type="submit" value="Send Message" class="btn">
+        </form>
+      </section>
+
+      <!-- typed js -->
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
   </body>
 </html>
