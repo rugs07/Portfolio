@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rugwed | Portfolio</title>
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <title> Rugwed | Portfolio</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <script src="../src/index.js"></script> -->
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
     
@@ -37,7 +38,7 @@
         <div class="social-media">
           <a href="https://github.com/rugs07"><i class='bx bxl-github'></i></a>
           <a href="https://www.linkedin.com/in/rugwed-bodhankar-7697371a9/"><i class='bx bxl-linkedin' ></i></a>
-          <a href="#"><i class='bx bxl-instagram' ></i></a>
+          <a href="https://instagram.com/rugwedbodhankar?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram' ></i></a>
           </div>
           <a href="https://drive.google.com/drive/folders/18COSsaf6zt322C7CJT1c2pyRrm9IalQ-?usp=drive_link" class="btn" onclick="document.querySelector('a').click()">Download CV</a>
       </div>
@@ -50,7 +51,7 @@
     <!-- about section design -->
     <section class="about" id="about">
       <div class="about-img">
-        <img src="Rugwedfinal.png" alt="">
+        <img src="Rugwed_final.png" alt="">
       </div>
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
@@ -210,7 +211,7 @@
     <!-- contact section design -->
       <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        <form>
+        <form action="https://formsubmit.co/rugwed07@gmail.com" method="POST">
           <div class="input-box">
             <input type="text" placeholder="Full Name" name="Fullname">
             <input type="email" placeholder="email Address" name="emailAddress">
@@ -222,7 +223,29 @@
           <textarea name="YourMessage" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
           <input type="submit" value="Send Message" class="btn">
         </form>
+        
       </section>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <!-- <script>
+          function sendEmail(){
+        Email.send({
+     Host : "smtp.gmail.com",
+     Username : "rugwed174518@gmail.com",
+     Password : "Rugwed@123",
+     To : 'rugwed07@gmail.com',
+     From : document.getElementById("emailAddress").value,
+     Subject : "Portfolio Contact Me",
+     Body : "And this is the body",
+     }).then(
+     (message) => {
+      alert("Email Sent Successfully");
+     },
+     (error) =>{
+      alert("Email Sending Failed");
+     }
+  ); 
+}
+        </script> -->
 
       <!-- footer design -->
       <footer class="footer">

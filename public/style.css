@@ -71,7 +71,7 @@ section{
 
 }
 .home-img img{
-    width: 35vw;
+    width: 45vw;
     animation: floatImage 4s ease-in-out infinite;
 
 }
@@ -151,7 +151,7 @@ span{
 }
 
 .about-img img{
-    width: 35vw;
+    width: 37vw;
 }
 .heading{
     text-align: center;
@@ -507,6 +507,9 @@ span{
     }
 }
 @media (max-width: 450px){
+    .home-img img{
+        margin-left: -4rem;;
+    }
     html{
         font-size: 50%;
     }
