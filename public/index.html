@@ -1,232 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title> Rugwed | Portfolio</title>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- <script src="../src/index.js"></script> -->
-    <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
-    
-  </head>
 
-  <body>
-    <!-- header design -->
-    <header class="header">
-      <a href="#" class="logo">Rugwed</a>
-      <i class='bx bx-menu' id="menu-icon"></i>
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        
-      </nav>
-    </header>
-    <!-- home section design -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <h3>Hello,It's Me</h3>
-        <h1>Rugwed Bodhankar</h1>
-        <h3>And I'm a <span class="multiple-texts"></span></h3>
-        <p>A passionate web developer with a love for crafting digital experiences. With a knack for turning ideas into interactive and user-friendly websites, I bring creativity and precision to every project</p>
-        <div class="social-media">
-          <a href="https://github.com/rugs07"><i class='bx bxl-github'></i></a>
-          <a href="https://www.linkedin.com/in/rugwed-bodhankar-7697371a9/"><i class='bx bxl-linkedin' ></i></a>
-          <a href="https://instagram.com/rugwedbodhankar?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram' ></i></a>
-          </div>
-          <a href="https://drive.google.com/drive/folders/18COSsaf6zt322C7CJT1c2pyRrm9IalQ-?usp=drive_link" class="btn" onclick="document.querySelector('a').click()">Download CV</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Rugwed | Portfolio</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- <script src="../src/index.js"></script> -->
+  <!-- custom css -->
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function myFunction(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const formDataObj = Object.fromEntries(formData.entries());
+    console.log(JSON.stringify(formDataObj));
+      // console.log(formData)
+
+      // Perform any form data validation or processing here
+
+      // Send a POST request using fetch
+      const url="https://wild-puce-turtle-cape.cyclic.cloud/sendEmail";
+      // const url="http://localhost:4000/sendEmail"
+      fetch(url, {
+        headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+        method: 'POST',
+        body: JSON.stringify(formDataObj)
+      })
+        .then(response => {
+          // Handle the response from the server here, if needed
+          alert("Email sent succesfully!")
+        })
+        .catch(error => {
+          // Handle any errors that occur during the request
+          alert(error)
+        });
+
+      return false;
+    }
+  </script>
+</head>
+
+<body>
+  <!-- header design -->
+  <header class="header">
+    <a href="#" class="logo">Rugwed</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+  </header>
+  <!-- home section design -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello,It's Me</h3>
+      <h1>Rugwed Bodhankar</h1>
+      <h3>And I'm a <span class="multiple-texts"></span></h3>
+      <p>A passionate web developer with a love for crafting digital experiences. With a knack for turning ideas into
+        interactive and user-friendly websites, I bring creativity and precision to every project</p>
+      <div class="social-media">
+        <a href="https://github.com/rugs07"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/rugwed-bodhankar-7697371a9/"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://instagram.com/rugwedbodhankar?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram'></i></a>
+      </div>
+      <a href="https://drive.google.com/drive/folders/18COSsaf6zt322C7CJT1c2pyRrm9IalQ-?usp=drive_link" class="btn"
+        onclick="document.querySelector('a').click()">Download CV</a>
+    </div>
+
+    <div class="home-img">
+      <img src="Rugwedfinal.png" alt="">
+    </div>
+  </section>
+
+  <!-- about section design -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="Rugwed_final.png" alt="">
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Web Developer!</h3>
+      <p>I'm a skilled software developer with expirence in JavaScript and expertise in frameworks like ReactJs.I'm a
+        quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions
+        that solve real-world problems. Let's work together to bring your ideas to life.</p>
+      <a href="#portfolio" class="btn">Read More</a>
+    </div>
+  </section>
+  <!-- Skills section design -->
+  <section class="skills" id="skills">
+    <div class="skills_section">
+      <div class="skills_head">
+        <h2 class="heading">My <span>Skills</span></h2>
       </div>
 
-      <div class="home-img">
-        <img src="Rugwedfinal.png" alt="">
-      </div>
-    </section>
-
-    <!-- about section design -->
-    <section class="about" id="about">
-      <div class="about-img">
-        <img src="Rugwed_final.png" alt="">
-      </div>
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Web Developer!</h3>
-        <p>I'm a skilled software developer with expirence in JavaScript and expertise in frameworks like ReactJs.I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
-        <a href="#portfolio" class="btn">Read More</a>
-      </div>
-    </section>
-    <!-- Skills section design -->
-      <section class="skills" id="skills">
-        <div class="skills_section">
-          <div class="skills_head">
-              <h2 class="heading">My <span>Skills</span></h2>
+      <div class="skills_main">
+        <div class="skill_bar">
+          <div class="info">
+            <p>HTML</p>
+            <P>90%</P>
           </div>
-  
-          <div class="skills_main">
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>HTML</p>
-                      <P>90%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="html"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>CSS</p>
-                      <P>85%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="css"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>ReactJS</p>
-                      <P>70%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="sass"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>JS</p>
-                      <P>70%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="js"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>SQL</p>
-                      <P>85%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="react"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>Github</p>
-                      <P>85%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="node"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>DSA</p>
-                      <P>75%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="express"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                  <div class="info">
-                      <p>MongoDB</p>
-                      <P>80%</P>
-                  </div>
-                  <div class="bar">
-                      <span class="mongo"></span>
-                  </div>
-              </div>
-              <div class="skill_bar">
-                <div class="info">
-                    <p>PHP</p>
-                    <P>65%</P>
-                </div>
-                <div class="bar">
-                    <span class="mongo"></span>
-                </div>
-            </div>
-            <div class="skill_bar">
-              <div class="info">
-                  <p>Postman</p>
-                  <P>85%</P>
-              </div>
-              <div class="bar">
-                  <span class="mongo"></span>
-              </div>
+          <div class="bar">
+            <span class="html"></span>
           </div>
-          </div>
-      </div>
-  
-      </section>
-
-    <!-- portfolio section design -->
-      <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Projects</span></h2>
-        <div class="portfolio-container">
-          <div class="portfolio-box">
-            <img src="project-1.png" alt="">
-            <div class="portfolio-layer">
-              <h4>Boat Store</h4>
-              <p>HTML, SCSS, REACTJS, STRAPI,  STRIPE</p>
-              <a href="https://github.com/rugs07/BoatStore"><i class='bx bx-link-external' ></i></a>
-            </div>
-          </div>
-
-          <div class="portfolio-box">
-            <img src="keeper.png" alt="">
-            <div class="portfolio-layer">
-              <h4>Keeper App</h4>
-              <p>REACTJS, MONGODB, NODEJS, EXPRESSJS</p>
-              <a href="https://github.com/rugs07/Keeper-App"><i class='bx bx-link-external' ></i></a>
-            </div>
-          </div>
-
-          <div class="portfolio-box">
-            <img src="url1.png" alt="">
-            <div class="portfolio-layer">
-              <h4>URL Shortener</h4>
-              <p>HTML, CSS, PHP, JAVASCRIPT, SQL</p>
-              <a href="https://github.com/rugs07/URL-shortener"><i class='bx bx-link-external' ></i></a>
-            </div>
-          </div>
-
-          <div class="portfolio-box">
-            <img src="pandu1.png" alt="">
-            <div class="portfolio-layer">
-              <h4>Weather App</h4>
-              <p>HTML, CSS, JAVASCRIPT</p>
-              <a href="https://github.com/rugs07/Weather-App"><i class='bx bx-link-external' ></i></a>
-            </div>
-          </div>
-
-
-
         </div>
-      </sectio>
-      
+        <div class="skill_bar">
+          <div class="info">
+            <p>CSS</p>
+            <P>85%</P>
+          </div>
+          <div class="bar">
+            <span class="css"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>ReactJS</p>
+            <P>70%</P>
+          </div>
+          <div class="bar">
+            <span class="sass"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>JS</p>
+            <P>70%</P>
+          </div>
+          <div class="bar">
+            <span class="js"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>SQL</p>
+            <P>85%</P>
+          </div>
+          <div class="bar">
+            <span class="react"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>Github</p>
+            <P>85%</P>
+          </div>
+          <div class="bar">
+            <span class="node"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>DSA</p>
+            <P>75%</P>
+          </div>
+          <div class="bar">
+            <span class="express"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>MongoDB</p>
+            <P>80%</P>
+          </div>
+          <div class="bar">
+            <span class="mongo"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>PHP</p>
+            <P>65%</P>
+          </div>
+          <div class="bar">
+            <span class="mongo"></span>
+          </div>
+        </div>
+        <div class="skill_bar">
+          <div class="info">
+            <p>Postman</p>
+            <P>85%</P>
+          </div>
+          <div class="bar">
+            <span class="mongo"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- portfolio section design -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="project-1.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Boat Store</h4>
+          <p>HTML, SCSS, REACTJS, STRAPI, STRIPE</p>
+          <a href="https://github.com/rugs07/BoatStore"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="keeper.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Keeper App</h4>
+          <p>REACTJS, MONGODB, NODEJS, EXPRESSJS</p>
+          <a href="https://github.com/rugs07/Keeper-App"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="url1.png" alt="">
+        <div class="portfolio-layer">
+          <h4>URL Shortener</h4>
+          <p>HTML, CSS, PHP, JAVASCRIPT, SQL</p>
+          <a href="https://github.com/rugs07/URL-shortener"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="pandu1.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Weather App</h4>
+          <p>HTML, CSS, JAVASCRIPT</p>
+          <a href="https://github.com/rugs07/Weather-App"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+
+
+    </div>
+    </sectio>
+
     <!-- contact section design -->
-      <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="https://formsubmit.co/rugwed07@gmail.com" method="POST">
-          <div class="input-box">
-            <input type="text" placeholder="Full Name" name="Fullname">
-            <input type="email" placeholder="email Address" name="emailAddress">
-          </div>
-          <div class="input-box">
-            <input type="number" placeholder="Mobile Number" name="MobileNumber">
-            <input type="text" placeholder="Email Subject" name="EmailSubject">
-          </div>
-          <textarea name="YourMessage" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-          <input type="submit" value="Send Message" class="btn">
-        </form>
-        
-      </section>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <!-- <script>
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form action="https://wild-puce-turtle-cape.cyclic.cloud/sendEmail" method="POST"
+        onsubmit="return myFunction(event)">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" name="name">
+          <input type="email" placeholder="email Address" name="email">
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number" name="mobile">
+          <input type="text" placeholder="Email Subject" name="EmailSubject">
+        </div>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script>
           function sendEmail(){
         Email.send({
      Host : "smtp.gmail.com",
@@ -247,19 +286,21 @@
 }
         </script> -->
 
-      <!-- footer design -->
-      <footer class="footer">
-        <div class="footer-text">
-          <p>Created by <span>Rugwed</span>  <i class='bx bx-envelope' style="margin-right: 0.3rem;" ></i>  rugwed174518@gmail.com | <i class='bx bx-copyright' ></i> 2023</p>
-        </div>
-        <div class="footer-icontop">
-          <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
-        </div>
-      </footer>
-      <!-- typed js -->
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- footer design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Created by <span>Rugwed</span> <i class='bx bx-envelope' style="margin-right: 0.3rem;"></i>
+          rugwed174518@gmail.com | <i class='bx bx-copyright'></i> 2023</p>
+      </div>
+      <div class="footer-icontop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+    </footer>
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="index.js"></script>
-  </body>
+</body>
+
 </html>
